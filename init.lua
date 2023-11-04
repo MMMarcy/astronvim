@@ -81,5 +81,10 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
-  end,
+    if vim.g.neovide then
+    -- Put anything you want to happen only in Neovide here
+      vim.g.neovide_scale_factor = 0.8
+      vim.o.guifont = "Source Code Pro:h14"
+    end
+  end
 }
